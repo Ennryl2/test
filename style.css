@@ -1,0 +1,207 @@
+/* Variables */
+:root {
+
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html {
+ font-size: 62.5%; 
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+picture,
+video,
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* General */
+
+body {
+    background-color: #f3eae3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.even-columns > * {
+    flex-basis: 50%;
+}
+
+.even-columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    max-width: 41rem;
+    transition: all 0.7s ease;
+}
+
+.perfume-img {
+    object-fit: cover;
+}
+
+.content {
+    padding: 2rem;
+}
+
+.item-name {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1rem;
+}
+
+.title {
+    color: #1d232a;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.title span {
+    display: block;
+}
+
+.desc {
+    font-size: .85rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.desc .chanel {
+    text-transform: uppercase;
+}
+
+.pricing {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.price {
+    color: #3a8268;
+}
+
+.price-discount {
+    text-decoration: line-through;
+}
+
+.price-discount, .item-name, .desc {
+    color: #92949a;
+}
+
+.title, .price {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: white;
+    font-weight: 600;
+    font-size: .8rem;
+    background-color: #3a8268;
+    border: 0;
+    border-radius: 4px;
+    width: 100%;
+    padding: .7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cart-svg {
+    width: 9px;
+}
+
+/* Animations */
+
+.cart:hover {
+    background-color: #1a4031;
+    transition: 0.2s;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 400px) {
+    .even-columns {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.7s ease;
+    }
+
+    .perfume-img {
+      transform: rotate(90deg);
+      max-width: 380px;
+    }
+}
+
